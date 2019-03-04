@@ -1,24 +1,73 @@
 import Guide from '~/components/layout/guide'
-import { TerminalInput } from '~/components/text/terminal'
+import { TerminalInput, TerminalOutput } from '~/components/text/terminal'
 import { InlineCode } from '~/components/text/code'
 import Caption from '~/components/text/caption'
 import Note from '~/components/text/note'
 import { GenericLink } from '~/components/text/link'
 import Card from '~/components/card'
+import Image from '~/components/media/image'
 
 export const meta = {
   title: 'Deploy a React application with Now and Create React App',
   description: 'How to deploy your Create React App project with Now',
   published: '2019-02-06T12:00:00.860Z',
-  authors: ['timothy'],
+  authors: ['timothy', 'grovesjoseph'],
   url: '/guides/deploying-react-with-now-cra'
 }
 
 React is a popular open-source JavaScript framework, maintained by Facebook, for easily creating interactive single-page applications (SPAs).
 
-In this guide, we will cover how to set up a React application with Create React App and how to deploy it with [ZEIT Now](/docs/v2).
+In this guide, we will cover how to set up a React application with Create React App (CRA) and how to deploy it with [ZEIT Now](/docs/v2).
 
-## Step 1: Set Up Your React Project
+### Pre-requisites:
+* `now` v14.0.0 and above
+
+If you have not yet installed Now, you can do so by installing the [Now Desktop app](/docs/v2/getting-started/installation/#now-desktop) which installs Now CLI automatically, or by [installing Now CLI](/docs/v2/getting-started/installation/#now-cli) directly.
+
+## Deploying a new CRA project using the Now CLI
+
+We'll be using the CLI throughout this guide.
+
+<TerminalOutput>
+$ now -v <br/>
+14.0.2</TerminalOutput>
+<Caption>`now -v` will show you your currently installed now version.</Caption>
+
+The easiest way to create and deploy a new project with CRA is to use the templates provided by the now cli.
+
+<TerminalOutput>
+$ now init <br/>
+> Select example: (Use arrow keys) <br/>
+  apollo <br/>
+  bash <br/>
+❯ create-react-app <br/>
+  docz <br/>
+  express <br/>
+  gatsby <br/>
+  go <br/>
+  gridsome<br/> 
+  html-minifier<br/> 
+  mdx-deck <br/>
+  mdx-deck-advanced <br/>
+  monorepo <br/>
+  nextjs <br/>
+  nextjs-news <br/>
+  nextjs-static <br/>
+(Move up and down to reveal more choices)</TerminalOutput>
+<Caption>`now init` will give you a list of projects you can choose, for this guide we're using the `create-react-app` example</Caption>
+
+This will make a new directory called `create-react-app` with everything configured out of the box.
+
+Run `now` from the root of the project and you'll get a link to the deployed project.
+
+<Image src={`${process.env.ASSETS}/guides/deploying-react-with-now-cra/running-cra-with-now.png`} width={1852/2.5}
+  height={1182/2.5}
+  oversize />
+
+
+## Deploying/Configuring an existing CRA project
+
+### Step 1: Set Up Your React Project
 
 An easy way to set up a React application is to use [Create React App (CRA)](https://facebook.github.io/create-react-app/). A CLI tool that helps generate a project for you to get up and go without any manual set up.
 
@@ -36,7 +85,7 @@ Once you have set up a React project with Create React App, you will be presente
 
 You can now start developing your React application while testing it on your local server.
 
-## Step 2: Deploy Your React Project with Now
+### Step 2: Deploy Your React Project with Now
 
 With your React project set up, you are ready to deploy your app with [Now](/now).
 
