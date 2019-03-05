@@ -19,7 +19,7 @@ React is a popular open-source JavaScript framework, maintained by Facebook, for
 
 In this guide, we will cover how to set up a React application with Create React App (CRA) and how to deploy it with [ZEIT Now](/docs/v2).
 
-If you want to start a fresh project using `now init` refer to <GenericLink href="#deploying-a-new-cra-project-using-the-now-cli">Deploying using now init</GenericLink>.
+If you want to start a fresh project using `now init` refer to <GenericLink href="#initialize-a-ready-to-deploy-cra-project-with-now-cli">Initialize a ready-to-deploy CRA project with Now CLI</GenericLink>.
 
 ## Deploying/Configuring an existing CRA project
 
@@ -143,23 +143,15 @@ Once the app is deployed, you will receive a deployment URL similar to the follo
 
 ### Pre-requisites:
 
-The method of initializing a project with Now requires Now CLI version 13.0.0 or above.
+The method of initializing a project with Now requires Now CLI version 13.0.0 or above. If you have not yet installed Now, you can do so by installing the [Now Desktop app](/docs/v2/getting-started/installation/#now-desktop) which installs Now CLI automatically, or by [installing Now CLI](/docs/v2/getting-started/installation/#now-cli) directly.
 
-If you need to install Now CLI and haven't followed the guide above, you can install Now CLI via [Now Desktop](/docs/v2/getting-started/installation/#now-desktop) for automatic updates or [directly](/docs/v2/getting-started/installation/#now-cli).
-
-If you have not yet installed Now, you can do so by installing the [Now Desktop app](/docs/v2/getting-started/installation/#now-desktop) which installs Now CLI automatically, or by [installing Now CLI](/docs/v2/getting-started/installation/#now-cli) directly.
-
-We'll be using the CLI throughout this guide.
-
-<TerminalOutput>
-$ now -v <br/>
-14.0.2</TerminalOutput>
-<Caption>`now -v` will show you your currently installed Now version.</Caption>
+<TerminalInput>now -v</TerminalInput>
+<Caption><InlineCode>now -v</InlineCode> will show you your currently installed Now version.</Caption>
 
 The easiest way to create and deploy a new project with CRA is to use the ready-to-deploy example templates provided by the ZEIT.
 
+<TerminalInput>now init</TerminalInput>
 <TerminalOutput>
-$ now init <br/>
 > Select example: (Use arrow keys) <br/>
   apollo <br/>
   bash <br/>
@@ -177,9 +169,9 @@ $ now init <br/>
   nextjs-news <br/>
   nextjs-static <br/>
 (Move up and down to reveal more choices)</TerminalOutput>
-<Caption>`now init` will give you a list of projects you can choose, for this guide we're using the `create-react-app` example</Caption>
+<Caption><InlineCode>now init</InlineCode> will give you a list of projects you can choose, for this guide we're using the <InlineCode>create-react-app</InlineCode> example</Caption>
 
-This will make a new directory called `create-react-app` with everything configured out of the box.
+To learn more about what's included in this premade project, read this guide from the start
 
 Run `now` from the root of the project and you'll get a link to the deployed project.
 
