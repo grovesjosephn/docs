@@ -177,7 +177,15 @@ Environment variables passed to the invoked [Lambdas](/docs/v2/deployments/conce
   <InlineCode>@now/static</InlineCode>.
 </Note>
 
-For more information, refer to [Builds](/docs/v2/deployments/builds) and [Builder](/docs/v2/deployments/builders/overview) documentation.
+For more information on builds and builders, see the documentation:
+
+<Card title="Builds" href="/docs/v2/deployments/builds">
+  Transform sources into production ready outputs with builds.
+</Card>
+
+<Card title="Builders" href="/docs/v2/deployments/builders/overview">
+  Choose from a range of existing builders or make your own.
+</Card>
 
 ### routes
 
@@ -192,10 +200,6 @@ For more information, refer to [Builds](/docs/v2/deployments/builds) and [Builde
 - `dest`: A destination pathname or full URL, including querystring, with the ability to embed capture groups as $1, $2…
 - `headers`: A set of headers to apply for responses.
 - `status`: A status code to respond with. Can be used in tandem with `Location:` header to implement redirects.
-
-**Example:**
-
-The following example configures custom routes that map to static files and lambdas
 
 <Example>
   <P.B>Usage Example:</P.B>
@@ -223,7 +227,7 @@ The following example configures custom routes that map to static files and lamb
 }`}</Code>
 </Example>
 
-For more information on routes, see the documentation it:
+For more information on routes, see the documentation:
 
 <Card title="Routes" href="/docs/v2/deployments/routes">
   Control your deployment's paths in detail with routes.
